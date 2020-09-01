@@ -1,0 +1,46 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+.gradle
+rebel.xml
+out
+gen
+**/.DS_Store
+trc
+*.iws
+*.ipr
+/out/
+
+Thumbs.db
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+.svn*
+catalina*
+/logs/
+.DS_Store
+bin/
+build/
+.settings/
+.git/
+**/lombok.config
