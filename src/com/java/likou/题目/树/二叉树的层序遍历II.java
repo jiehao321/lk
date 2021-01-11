@@ -1,8 +1,7 @@
-package com.java.likou.题目.二叉树;
+package com.java.likou.题目.树;
 
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
