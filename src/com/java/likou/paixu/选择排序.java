@@ -9,19 +9,18 @@ public class 选择排序 {
 
     public static void main(String[] args) {
         int[] array = {10,9,11, 28, 56, 37};
-        for (int end = array.length-1; end > 0; end--) {
-            int cur = end;
-            for (int begin = 0; begin < end; begin++) {
-                if (array[begin] >array[end]) cur=begin;
+        for (int i = 0; i < array.length-1; i++) {
+            int min = i;
+            for (int j = i+1; j < array.length; j++){
+                if (array[min] > array[j]) min = j;
             }
-            int temp = array[end];
-            array[end] = array[cur];
-            array[cur] = temp;
+            int tmp = array[i];
+            array[i] = array[min];
+            array[min] = tmp;
         }
+
         for (int value : array) {
             System.out.print("_" + value);
         }
-
-
     }
 }
