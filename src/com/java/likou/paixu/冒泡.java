@@ -31,7 +31,7 @@ public class 冒泡 {
     public static void aVoid(){
 
         int[] array = {10,9,11, 3, 56,  37};
-        int temp = 0;
+        int temp;
         for (int i = 0; i < array.length; i++) {
             for (int j = 1; j < array.length-i; j++) {
                 if (array[j] < array[j-1]){
