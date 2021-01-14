@@ -24,20 +24,31 @@ import java.util.List;
  */
 public class 二叉树的层平均值 {
 
-    List<Double> list = new ArrayList<>();
-
     public List<Double> averageOfLevels(TreeNode root) {
-
-        levels(root);
-        return list;
+        List<Integer> counts = new ArrayList<Integer>(); // 层数
+        List<Double> sums = new ArrayList<Double>(); // 和
+        dfs(root, 0, counts, sums);
+        List<Double> averages = new ArrayList<Double>(); // 返回
+        int size = sums.size();
+        for (int i = 0; i < size; i++) {
+            averages.add(sums.get(i) / counts.get(i));
+        }
+        return averages;
     }
 
-    private void levels(TreeNode root) {
-        if (root == null) return;
-
-        levels(root.left);
-        levels(root.right);
-
-
+    public void dfs(TreeNode root, int level, List<Integer> counts, List<Double> sums) {
+        if (root == null) {
+            // 节点为null 直接返回
+            return;
+        }
+        if (level < sums.size()) {
+            sums.set(level, sums.get(level) + root.val);
+            counts.set(level, counts.get(level) + 1);
+        } else {
+            sums.add(1.0 * root.val);
+            counts.add(1);
+        }
+        dfs(root.left, level + 1, counts, sums);
+        dfs(root.right, level + 1, counts, sums);
     }
 }
