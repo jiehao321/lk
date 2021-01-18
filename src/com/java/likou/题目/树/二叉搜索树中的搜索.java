@@ -37,10 +37,11 @@ public class 二叉搜索树中的搜索 {
         if (root == null) return;
         if (root.val == val) node = root;
 
+        // 前序
         search(root.left, val);
-
+        // 中序
         search(root.right, val);
-
+        // 后续
 
     }
 }
