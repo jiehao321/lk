@@ -33,7 +33,6 @@ public class 排序 {
         swap(nums, left, lo);                 // 把分界点元素移动到新的分界位置
         quick(nums, left, lo-1);
         quick(nums, lo+1, right);
-
     }
 
     private static void swap(int[] nums, int i, int cur) {
@@ -56,9 +55,6 @@ public class 排序 {
             array[j] = temp;
 
         }
-        for (int value : array) {
-            System.out.print("_" + value);
-        }
     }
 
     private static void choose(int[] array) {
@@ -78,9 +74,6 @@ public class 排序 {
                 array[i] = array[start];
                 array[start] = temp;
             }
-        }
-        for (int value : array) {
-            System.out.print("_" + value);
         }
     }
 
