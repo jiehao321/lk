@@ -1,4 +1,4 @@
-package com.java.likou.paixu;
+package com.java.likou.排序;
 
 public class 排序1 {
 
@@ -21,10 +21,10 @@ public class 排序1 {
 
     private static void quick(int[] nums, int left, int right) {
         if (left>right)return;
-        int lo=left,cur=left+1;
+        int lo=left, cur=left+1;
         while (cur<=right){
             if (nums[cur]<=nums[left]){
-                swap(nums, cur, lo+1);
+                swap(nums, lo+1, cur);
                 lo++;
             }
             cur++;

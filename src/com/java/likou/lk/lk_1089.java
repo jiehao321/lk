@@ -1,7 +1,4 @@
-package com.java.likou;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
+package com.java.likou.lk;
 
 /**
  * @author holler

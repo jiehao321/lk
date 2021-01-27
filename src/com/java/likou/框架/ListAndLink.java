@@ -1,4 +1,4 @@
-package com.java.likou.kuangjia;
+package com.java.likou.框架;
 
 /**
  * @author j

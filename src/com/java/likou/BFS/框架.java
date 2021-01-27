@@ -11,7 +11,6 @@ public class 框架 {
         q.offer(start); // 将起点加入队列
         visited.add(start);
         int step = 0; // 记录扩散的步数
-
         while (q not empty) {
             int sz = q.size();
             // 将当前队列中的所有节点向四周扩散

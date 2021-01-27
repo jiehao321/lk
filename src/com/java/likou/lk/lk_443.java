@@ -1,8 +1,6 @@
-package com.java.likou;
+package com.java.likou.lk;
 
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * @author holler

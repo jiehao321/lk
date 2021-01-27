@@ -1,4 +1,4 @@
-package com.java.likou;
+package com.java.likou.lk;
 
 /**
  * @author holler

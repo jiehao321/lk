@@ -1,4 +1,4 @@
-package com.java.likou;
+package com.java.likou.lk;
 
 import java.math.BigDecimal;
 import java.text.ParseException;
