@@ -31,10 +31,34 @@ public class ListAndLink {
      * @param head
      */
     void traverse2(ListNode head) {
+        if (head == null)return;
         // 递归访问 head.val
         traverse2(head.next);
     }
 
+    /**
+     * 反转链表
+     * @param head
+     * @return
+     */
+    ListNode reverse(ListNode head) {
+        if (head.next == null) return head;
+        ListNode last = reverse(head.next);
+        head.next.next = head;
+        head.next = null;
+        return last;
+    }
+    //反转链表
+    ListNode reverse2(ListNode head) {
+        ListNode prev = null;
+        while (head != null) {
+            ListNode next = head.next;
+            head.next = prev;
+            prev = head;
+            head = next;
+        }
+        return prev;
+    }
 
 }
 
