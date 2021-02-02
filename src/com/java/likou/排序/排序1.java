@@ -20,10 +20,10 @@ public class 排序1 {
     }
 
     private static void quick(int[] nums, int left, int right) {
-        if (left>right)return;
+        if (left> right)return;
         int lo=left, cur=left+1;
         while (cur<=right){
-            if (nums[cur]<=nums[left]){
+            if (nums[cur] <= nums[left]){
                 swap(nums, lo+1, cur);
                 lo++;
             }
