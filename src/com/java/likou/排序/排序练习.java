@@ -1,6 +1,6 @@
 package com.java.likou.排序;
 
-public class 排序1 {
+public class 排序练习 {
 
 
     public static void main(String[] args) {
@@ -21,8 +21,8 @@ public class 排序1 {
 
     private static void quick(int[] nums, int left, int right) {
         if (left> right)return;
-        int lo=left, cur=left+1;
-        while (cur<=right){
+        int lo=left, cur =left+1;
+        while (cur <=right){
             if (nums[cur] <= nums[left]){
                 swap(nums, lo+1, cur);
                 lo++;
@@ -32,6 +32,8 @@ public class 排序1 {
         swap(nums, lo, left);
         quick(nums, left, lo-1);
         quick(nums, lo+1, right);
+
+
     }
 
     private static void swap(int[] nums, int i, int cur) {

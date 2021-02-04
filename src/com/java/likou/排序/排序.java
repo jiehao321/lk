@@ -8,11 +8,12 @@ public class 排序 {
         int[] array = {10, 9, 111, 11, 138, 56, 37};
 
         // 选择排序
-        //choose(array);
+
+        choose(array);
         // 插入排序
         //insert(array);
         // 快速排序
-        quick(array, 0, array.length-1);
+        //quick(array, 0, array.length-1);
         for (int value : array) {
             System.out.print("_" + value);
         }
@@ -42,7 +43,9 @@ public class 排序 {
     }
 
     private static void insert(int[] array) {
-        // 每次选择一个放到合适的位置
+        // 插入排序从左到右进行，每次都将当前元素插入到左侧已经排序的数组中，使得插入之后左部数组依然有序。
+        //第 j 元素是通过不断向左比较并交换来实现插入过程：当
+        // 第 j 元素小于第 j - 1 元素，就将它们的位置交换，然后令 j 指针向左移动一个位置，不断进行以上操作。
         for (int i = 0; i < array.length; i++) {
             int j = i, temp = array[i];
             while (j>0 && array[j-1]>temp){
@@ -54,22 +57,14 @@ public class 排序 {
     }
 
     private static void choose(int[] array) {
-
-        // 选择排序,选择一个数与其他数比较,最小的数与当前的数交换
-
-        int length = array.length;
-        for (int i = 0; i < length-1; i++) {
-            // 初始位置
-            int start = i;
-            for (int j = i+1; j < length  ; j++) {
-                if (array[j] < array[start]) start = j;
+        // 选择出数组中的最小元素，将它与数组的第一个元素交换位置。
+        // 再从剩下的元素中选择出最小的元素，将它与数组的第二个元素交换位置。不断进行这样的操作，直到将整个数组排序。
+        for (int i = 0; i < array.length; i++) {
+            int mix=i;
+            for (int i1 = mix + 1; i1 < array.length; i1++) {
+                if (array[mix] < array[i1])mix=i1;
             }
-            // 交换
-            if (start != i){
-                int temp = array[i];
-                array[i] = array[start];
-                array[start] = temp;
-            }
+            swap(array, mix, i);
         }
     }
 
