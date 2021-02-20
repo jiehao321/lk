@@ -20,20 +20,19 @@ public class 排序练习 {
     }
 
     private static void quick(int[] nums, int left, int right) {
-        if (left> right)return;
-        int lo=left, cur =left+1;
-        while (cur <=right){
+        if (left>right)return;
+        int lo = left, cur = left+1;
+
+        while (cur <= right){
             if (nums[cur] <= nums[left]){
-                swap(nums, lo+1, cur);
+                swap(nums, cur, lo+1);
                 lo++;
             }
             cur++;
         }
-        swap(nums, lo, left);
+        swap(nums, left, lo);
         quick(nums, left, lo-1);
         quick(nums, lo+1, right);
-
-
     }
 
     private static void swap(int[] nums, int i, int cur) {

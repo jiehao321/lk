@@ -9,8 +9,6 @@ import java.util.Arrays;
 
  初始化 nums1 和 nums2 的元素数量分别为 m 和 n 。你可以假设 nums1 的空间大小等于 m + n，这样它就有足够的空间保存来自 nums2 的元素。
 
-
-
  示例 1：
 
  输入：nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
