@@ -18,8 +18,6 @@ package com.java.likou.链表;
  * 解释：342 + 465 = 807.
  */
 public class 两数相加 {
-
-
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int base = 0;
         ListNode node = new ListNode(0);
