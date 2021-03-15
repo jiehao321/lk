@@ -20,9 +20,8 @@ public class 排序练习 {
     }
 
     private static void quick(int[] nums, int left, int right) {
-        if (left>right)return;
-        int lo = left, cur = left+1;
-
+        if (left >= right)return;
+        int cur = left + 1, lo = left;
         while (cur <= right){
             if (nums[cur] <= nums[left]){
                 swap(nums, cur, lo+1);
