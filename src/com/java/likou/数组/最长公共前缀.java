@@ -21,18 +21,14 @@ package com.java.likou.数组;
 public class 最长公共前缀 {
 
     public String longestCommonPrefix(String[] strs) {
-        if (strs == null || strs.length == 0)return "";
-        String str = strs[0];
+        if (strs.length == 0) return "";
+        String res = strs[0];
         for (int i = 1; i < strs.length; i++) {
             int j = 0;
-            for (; j < strs[i].length() && j < str.length(); j++) {
-                if (strs[i].charAt(j) != str.charAt(j)){
-                    break;
-                }
-            }
-            str = strs[i].substring(0, j);
-            if (str.equals(""))return "";
+            for (; j < res.length() && j < strs[i].length(); j++)
+                if (res.charAt(j) != strs[i].charAt(j))break;
+            res = res.substring(0, j);
         }
-        return str;
+        return res;
     }
 }

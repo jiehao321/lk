@@ -23,16 +23,14 @@ package com.java.likou.数组;
 public class 删除有序数组中的重复项 {
 
     public int removeDuplicates(int[] nums) {
-
-        int cur=1, lo=0, length = nums.length;
-        while (cur < nums.length){
-            if (nums[cur] != nums[lo]){
-                int temp = nums[cur];
-                nums[lo+1] = temp;
-                lo++;
+        int left=0, right=0;
+        while (right<nums.length){
+            if (nums[left] == nums[right])right++;
+            else {
+                left++;
+                nums[left] = nums[right];
             }
-            cur++;
         }
-        return lo + 1;
+        return left+1;
     }
 }

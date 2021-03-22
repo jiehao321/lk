@@ -1,6 +1,8 @@
 package com.java.likou.快慢指针;
 
 
+import com.sun.xml.internal.ws.util.StringUtils;
+
 /**
  * 给你一个字符串 s，找到 s 中最长的回文子串。
  * <p>
@@ -18,22 +20,22 @@ package com.java.likou.快慢指针;
  */
 public class 最长回文子串 {
     public String longestPalindrome(String s) {
-        String res = ""; //初始化定义
+        if (s == null || s.length() == 0)return "";
+        String res = "";
         for (int i = 0; i < s.length(); i++) {
-            String s1 = pal(s, i, i);
-            String s2 = pal(s, i, i + 1);
-            res = res.length() > s1.length() ? res : s1;
-            res = res.length() > s2.length() ? res : s2;
+            String s1 = fet(s, i, i);
+            String s2 = fet(s, i, i + 1);
+            res = s1.length() > res.length() ? s1 : res;
+            res = s2.length() > res.length() ? s2 : res;
         }
         return res;
     }
-
-    private String pal(String s, int i, int i1) {
+    private String fet(String s, int i, int j) {
         char[] chars = s.toCharArray();
-        while (i >= 0 && i1 < s.length() && chars[i] == chars[i1]) {
+        while (i >=0 && j < s.length() && chars[i] == chars[j]){
             i--;
-            i1++;
+            j++;
         }
-        return s.substring(i + 1, i1);
+        return s.substring(i, j+1);
     }
 }
