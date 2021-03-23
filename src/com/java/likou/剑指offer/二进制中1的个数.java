@@ -20,11 +20,6 @@ package com.java.likou.剑指offer;
 public class 二进制中1的个数 {
 
     public int hammingWeight(int n) {
-        int count=0;
-        String s = String.valueOf(n);
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == '1')count++;
-        }
-        return count;
+        return Integer.bitCount(n);
     }
 }
